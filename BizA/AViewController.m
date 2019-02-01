@@ -7,6 +7,7 @@
 //
 
 #import "AViewController.h"
+#import <BizB_Category/CTMediator+BizB.h>
 
 @interface AViewController ()
 
@@ -18,9 +19,9 @@
     [super viewDidLoad];
 }
 
-//- (IBAction)onClickB:(id)sender {
-//    BViewController *bvc = [[BViewController alloc] initWithNibName:nil bundle:nil];
-//    [self.navigationController pushViewController:bvc animated:YES];
-//}
+- (IBAction)onClickB:(id)sender {
+    UIViewController *vc = [[CTMediator sharedInstance] BizB_viewController];
+    [self.navigationController pushViewController:vc animated:YES];
+}
 
 @end
